@@ -445,8 +445,9 @@
         <div>
           <label for="wa-target-select">1. ¿A qué WhatsApp envía el QR?</label>
           <select id="wa-target-select">
-            <option value="593980873462">Tumbaco / Quito (Tú: +593 98 087 3462)</option>
-            <option value="593989347024">Ibarra / Norte (Hermano: +593 98 934 7024)</option>
+            <option value="593980873462">WhatsApp Quito / Tumbaco (Tú: +593 98 087 3462)</option>
+            <option value="593989347024">WhatsApp Ibarra / Norte (Hermano: +593 98 934 7024)</option>
+            <option value="web">Web Pública GitHub Pages (ricciyazigi.github.io/woodgool)</option>
             <option value="custom">Escribir otro enlace / URL personalizada</option>
           </select>
         </div>
@@ -735,6 +736,8 @@
           return 'https://wa.me/593980873462?text=Hola%20WoodGool';
         } else if (mode === '593989347024') {
           return 'https://wa.me/593989347024?text=Hola%20WoodGool';
+        } else if (mode === 'web') {
+          return 'https://ricciyazigi.github.io/woodgool/';
         } else {
           return (qrInput.value || 'https://wa.me/593980873462?text=Hola%20WoodGool').trim();
         }
