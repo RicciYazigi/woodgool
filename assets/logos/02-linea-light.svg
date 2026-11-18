@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210" fill="none" role="img" aria-label="WoodGool 02 Encuentro Cancha" style="color:#1C1C1B">
+  <path d="M84 42V24C84 17.373 89.373 12 96 12H156L164 22H196L204 12H264C270.627 12 276 17.373 276 24V42" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M84 86V104C84 110.627 89.373 116 96 116H156L164 106H196L204 116H264C270.627 116 276 110.627 276 104V86" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="180" cy="64" r="24" stroke="currentColor" stroke-width="2.5" stroke-dasharray="4 4" opacity="0.45"/>
+  <path d="M46 54H132M228 74H314" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+  <rect x="118" y="34" width="26" height="40" rx="4" fill="currentColor"/>
+  <rect x="125" y="70" width="12" height="12" rx="2" fill="currentColor"/>
+  <rect x="216" y="54" width="26" height="40" rx="4" fill="currentColor"/>
+  <rect x="223" y="46" width="12" height="12" rx="2" fill="currentColor"/>
+  <circle cx="180" cy="64" r="9.5" fill="#D96B43" class="accent-ball"/>
+  <text x="180" y="176" text-anchor="middle" fill="currentColor" font-family="'Manrope','DM Sans',Arial,sans-serif" font-size="46" font-weight="700" letter-spacing="-1.5">WoodGool</text>
+</svg>

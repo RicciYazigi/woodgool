@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210" fill="none" role="img" aria-label="WoodGool 05 Monograma WG Bloque" style="color:#1C1C1B">
+  <path d="M76 26V88C76 99.046 84.954 108 96 108H108C119.046 108 128 99.046 128 88V52" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M128 52V88C128 99.046 136.954 108 148 108H160C171.046 108 180 99.046 180 88V26" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="115" y="34" width="26" height="36" rx="4" fill="currentColor"/>
+  <rect x="122" y="67" width="12" height="13" rx="2" fill="currentColor"/>
+  <path d="M276 44C269 31 255 24 238 24C212.595 24 194 42.804 194 66C194 89.196 212.595 108 238 108C262 108 280 92 280 68V64H242" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M54 52H154" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="236" cy="66" r="10.5" fill="#D96B43" class="accent-ball"/>
+  <text x="180" y="174" text-anchor="middle" fill="currentColor" font-family="'Manrope','DM Sans',Arial,sans-serif" font-size="44" font-weight="800" letter-spacing="-1.5">WoodGool</text>
+</svg>

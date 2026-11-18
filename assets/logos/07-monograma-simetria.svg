@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210" fill="none" role="img" aria-label="WoodGool 07 Monograma Simetria" style="color:#F5F2EB">
+  <rect x="116" y="10" width="128" height="112" rx="22" stroke="currentColor" stroke-width="6"/>
+  <path d="M76 46H204" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+  <path d="M156 86H284" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/>
+  <rect x="142" y="28" width="22" height="36" rx="4" fill="currentColor"/>
+  <rect x="196" y="68" width="22" height="36" rx="4" fill="currentColor"/>
+  <circle cx="180" cy="66" r="9" fill="#D96B43" class="accent-ball"/>
+  <text x="180" y="168" text-anchor="middle" fill="currentColor" font-family="'Manrope','DM Sans',Arial,sans-serif" font-size="38" font-weight="800" letter-spacing="4">WOODGOOL</text>
+</svg>

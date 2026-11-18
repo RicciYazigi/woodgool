@@ -1,0 +1,18 @@
+/* Estilos adicionales de lanzamiento WoodGool (Dark Minimalist Edition) */
+.logo-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 45;
+  background: rgba(18, 18, 17, 0.92);
+  border: 1px solid rgba(212, 170, 120, 0.4);
+  color: #F5F2EB;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  backdrop-filter: blur(10px);
+  display: none;
+}
+.logo-toast.visible {
+  display: block;
+}
