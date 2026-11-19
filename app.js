@@ -105,7 +105,7 @@
       const payment = payEl ? payEl.value : 'Transferencia al momento de la entrega';
 
       const msg = [
-        'Hola WoodGool, quiero pedir mi juego (precio de lanzamiento $75 USD):',
+        'Hola WoodGool, quiero pedir mi juego ($75 USD):',
         '',
         '- Cantidad: ' + qty + (qty === 1 ? ' unidad' : ' unidades'),
         '- Total: $' + total + ' USD',
@@ -295,7 +295,7 @@
       'hero-eyebrow': '<span class="dot"></span> JUEGO DE MESA 1V1 EN MADERA · HECHO EN ECUADOR',
       'hero-h1': 'Fútbol de mesa en madera, rápido y sin complicaciones<span class="accent">.</span>',
       'hero-intro': 'Dos jugadores, dos varas libres y una pelota. Se entiende en 10 segundos y no necesita pilas ni pantallas.',
-      'offer-tag': '● PRECIO DE LANZAMIENTO',
+      'offer-tag': '● SET COMPLETO',
       'offer-status': 'DISPONIBLE PARA ENTREGA',
       'hero-cta': 'Pedir por WhatsApp ($75) <span>↗</span>',
       'hero-subcta': 'Ver cómo se juega <span>↓</span>',
@@ -314,13 +314,13 @@
       'videos-h2': 'Míralo en movimiento.',
       'videos-p': 'Tres tomas reales de partida para ver la velocidad del juego, el movimiento de las varas y cómo entra el gol.',
       'checkout-h2': 'Pide tu WoodGool hoy.',
-      'checkout-p': 'Precio de lanzamiento <strong>$75 USD</strong> (precio regular $89 USD). Reservas directo por WhatsApp y <strong>pagas por transferencia bancaria o efectivo al momento de recibirlo</strong>.'
+      'checkout-p': 'Pide directo por WhatsApp con <strong>$14 USD de ahorro</strong> (<del>$89</del> <strong>$75 USD</strong>) y <strong>paga por transferencia bancaria o efectivo al momento de recibirlo</strong>.'
     },
     retador: {
       'hero-eyebrow': '<span class="dot"></span> 1 CONTRA 1 · CERO PANTALLAS',
       'hero-h1': 'El que pierde paga la siguiente<span class="accent">.</span>',
       'hero-intro': 'Un juego de mesa en madera que se explica en 10 segundos y termina siempre en revancha. Dos varas libres, una pelota y reflejos puros.',
-      'offer-tag': '● PRECIO DE LANZAMIENTO',
+      'offer-tag': '● SET COMPLETO',
       'offer-status': 'ENTREGAS QUITO, IBARRA Y ENVÍOS',
       'hero-cta': 'Quiero el mío ($75) <span>↗</span>',
       'hero-subcta': 'Ver cómo se juega <span>↓</span>',
@@ -339,13 +339,13 @@
       'videos-h2': 'Así se viven los partidos.',
       'videos-p': 'Sin edición ni trucos: mira qué tan rápido es el ida y vuelta con las dos varas libres.',
       'checkout-h2': '¿Quién pide la revancha?',
-      'checkout-p': 'Llévatelo a precio de lanzamiento por <strong>$75 USD</strong> (antes $89). Escríbenos por WhatsApp y <strong>pagas al momento de la entrega</strong>.'
+      'checkout-p': 'Llévatelo con <strong>-16% de ahorro</strong> (<del>$89</del> <strong>$75 USD</strong>). Escríbenos por WhatsApp y <strong>pagas al momento de la entrega</strong>.'
     },
     minimalista: {
       'hero-eyebrow': '<span class="dot"></span> WOODGOOL · SOCCER TABLE GAME',
       'hero-h1': 'Dos varas. Una pelota. Tu mesa<span class="accent">.</span>',
       'hero-intro': 'Fútbol de mesa 1v1 en madera maciza. Sin plásticos, sin baterías, sin reglas largas. Hecho en Ecuador.',
-      'offer-tag': '● PRECIO DE LANZAMIENTO',
+      'offer-tag': '● SET COMPLETO',
       'offer-status': 'ENTREGA INMEDIATA',
       'hero-cta': 'Reservar ($75 USD) <span>↗</span>',
       'hero-subcta': 'Ver videos <span>↓</span>',
@@ -364,7 +364,7 @@
       'videos-h2': 'En acción.',
       'videos-p': 'Tres ángulos reales de juego en mesa.',
       'checkout-h2': 'Reserva el tuyo.',
-      'checkout-p': '<strong>$75 USD</strong> por lanzamiento (regular $89 USD). Coordina la entrega por WhatsApp y <strong>paga por transferencia al recibir</strong>.'
+      'checkout-p': '<del>$89</del> <strong>$75 USD</strong> (ahorras $14). Coordina la entrega por WhatsApp y <strong>paga por transferencia al recibir</strong>.'
     }
   };
 
