@@ -105,14 +105,14 @@
       const payment = payEl ? payEl.value : 'Transferencia al momento de la entrega';
 
       const msg = [
-        '¡Hola WoodGool! 🪵⚽ Quiero reservar mi juego con la *Oferta de Lanzamiento Navidad ($75 USD)*:',
+        'Hola WoodGool, quiero pedir mi juego (precio de lanzamiento $75 USD):',
         '',
-        '• *Cantidad:* ' + qty + (qty === 1 ? ' unidad' : ' unidades'),
-        '• *Total a pagar:* $' + total + ' USD (Ahorro $' + saved + ' USD sobre precio normal de $' + (qty * PRICE_REGULAR) + ')',
-        '• *Nombre:* ' + name,
-        '• *Punto de despacho:* ' + hubName,
-        '• *Sector / Dirección:* ' + city,
-        '• *Forma de pago:* ' + payment,
+        '- Cantidad: ' + qty + (qty === 1 ? ' unidad' : ' unidades'),
+        '- Total: $' + total + ' USD',
+        '- Nombre: ' + name,
+        '- Zona: ' + hubName,
+        '- Dirección / Sector: ' + city,
+        '- Pago: ' + payment,
         '',
         '¿Me confirman disponibilidad para coordinar la entrega?'
       ].join('\n');
@@ -289,4 +289,102 @@
       link.addEventListener('click', () => nav.classList.remove('open'));
     });
   }
+  // 7. VARIACIONES DE COPY HUMANO (PARA PREVIEW.HTML Y ?v=directo|retador|minimalista)
+  const copyVariants = {
+    directo: {
+      'hero-eyebrow': '<span class="dot"></span> JUEGO DE MESA 1V1 EN MADERA · HECHO EN ECUADOR',
+      'hero-h1': 'Fútbol de mesa en madera, rápido y sin complicaciones<span class="accent">.</span>',
+      'hero-intro': 'Dos jugadores, dos varas libres y una pelota. Se entiende en 10 segundos y no necesita pilas ni pantallas.',
+      'offer-tag': '● PRECIO DE LANZAMIENTO',
+      'offer-status': 'DISPONIBLE PARA ENTREGA',
+      'hero-cta': 'Pedir por WhatsApp ($75) <span>↗</span>',
+      'hero-subcta': 'Ver cómo se juega <span>↓</span>',
+      'ch0-h2': 'Se saca en cualquier reunión.',
+      'ch0-p': 'Lo pones sobre la mesa y en un minuto ya hay fila esperando jugar. Funciona en casa, en la oficina o en una tarde entre amigos.',
+      'ch1-h2': 'Una vara por persona.',
+      'ch1-p': 'Cada jugador controla un solo bloque de madera con las dos manos por fuera del tablero. Nada de piezas plásticas ni barras trabadas.',
+      'ch2-h2': 'Movimiento libre en la ranura.',
+      'ch2-p': 'Las varas corren por dos ranuras laterales: puedes avanzar, retroceder, cruzar en ángulo y rematar con muñeca.',
+      'ch3-h2': 'Madera sellada, listo para usar.',
+      'ch3-p': 'Tablero resistente con paredes de buen rebote, arcos con triángulo interno y bandejas donde cae la pelota después de cada gol.',
+      'ch4-h2': 'Fácil de guardar y llevar.',
+      'ch4-p': 'Las varas se sacan en segundos para guardarlo plano o llevarlo en el carro a cualquier reunión, sin ocupar el espacio de un futbolín grande.',
+      'ch5-h2': 'Qué viene en la caja.',
+      'ch5-p': 'Tablero armado, 2 varas de 90 cm con bloques fijados, 3 pelotas de madera y topes antideslizantes en la base.',
+      'videos-h2': 'Míralo en movimiento.',
+      'videos-p': 'Tres tomas reales de partida para ver la velocidad del juego, el movimiento de las varas y cómo entra el gol.',
+      'checkout-h2': 'Pide tu WoodGool hoy.',
+      'checkout-p': 'Precio de lanzamiento <strong>$75 USD</strong> (precio regular $89 USD). Reservas directo por WhatsApp y <strong>pagas por transferencia bancaria o efectivo al momento de recibirlo</strong>.'
+    },
+    retador: {
+      'hero-eyebrow': '<span class="dot"></span> 1 CONTRA 1 · CERO PANTALLAS',
+      'hero-h1': 'El que pierde paga la siguiente<span class="accent">.</span>',
+      'hero-intro': 'Un juego de mesa en madera que se explica en 10 segundos y termina siempre en revancha. Dos varas libres, una pelota y reflejos puros.',
+      'offer-tag': '● PRECIO DE LANZAMIENTO',
+      'offer-status': 'ENTREGAS QUITO, IBARRA Y ENVÍOS',
+      'hero-cta': 'Quiero el mío ($75) <span>↗</span>',
+      'hero-subcta': 'Ver cómo se juega <span>↓</span>',
+      'ch0-h2': '«Una más y nos vamos».',
+      'ch0-p': 'Lo sacas después de comer y nadie vuelve a ver el celular. Partidos cortos, rápidos y con pique garantizado.',
+      'ch1-h2': 'Sin excusas: uno contra uno.',
+      'ch1-p': 'Solo tu vara, tu bloque de madera y tus reflejos. Si entra el gol, fue buena jugada; si te lo tapan, toca defender.',
+      'ch2-h2': 'Muévete como quieras.',
+      'ch2-p': 'La vara corre libre por las ranuras laterales: defiende pegado al arco, sal a presionar o cruza el remate en diagonal.',
+      'ch3-h2': 'Hecho para aguantar partidos fuertes.',
+      'ch3-p': 'Madera firme, buena acústica al golpear la pelota y bandejas laterales para recoger rápido y volver a sacar.',
+      'ch4-h2': 'Cabe en cualquier mesa.',
+      'ch4-p': 'Mesa del comedor, terraza, sala o bar. No necesita cables ni espacio gigante como un futbolín tradicional.',
+      'ch5-h2': 'Listo para jugar apenas llega.',
+      'ch5-p': 'Viene armado con sus 2 varas desmontables, 3 pelotas de madera y base antideslizante.',
+      'videos-h2': 'Así se viven los partidos.',
+      'videos-p': 'Sin edición ni trucos: mira qué tan rápido es el ida y vuelta con las dos varas libres.',
+      'checkout-h2': '¿Quién pide la revancha?',
+      'checkout-p': 'Llévatelo a precio de lanzamiento por <strong>$75 USD</strong> (antes $89). Escríbenos por WhatsApp y <strong>pagas al momento de la entrega</strong>.'
+    },
+    minimalista: {
+      'hero-eyebrow': '<span class="dot"></span> WOODGOOL · SOCCER TABLE GAME',
+      'hero-h1': 'Dos varas. Una pelota. Tu mesa<span class="accent">.</span>',
+      'hero-intro': 'Fútbol de mesa 1v1 en madera maciza. Sin plásticos, sin baterías, sin reglas largas. Hecho en Ecuador.',
+      'offer-tag': '● PRECIO DE LANZAMIENTO',
+      'offer-status': 'ENTREGA INMEDIATA',
+      'hero-cta': 'Reservar ($75 USD) <span>↗</span>',
+      'hero-subcta': 'Ver videos <span>↓</span>',
+      'ch0-h2': 'Un juego que se queda en la mesa.',
+      'ch0-p': 'Diseño limpio en madera natural que acompaña tu espacio y se convierte en partido en diez segundos.',
+      'ch1-h2': 'Dos bloques. Control directo.',
+      'ch1-p': 'Un jugador por lado fijado a su vara. Todo depende del ángulo, la velocidad de muñeca y el tiempo de reacción.',
+      'ch2-h2': 'Ranuras laterales abiertas.',
+      'ch2-p': 'Desplazamiento libre en dos ejes: profundidad, lateralidad e inclinación en un solo movimiento natural.',
+      'ch3-h2': 'Construcción sólida.',
+      'ch3-p': 'Superficie lisa para un rodado rápido, bordes rígidos para pases con banda y arcos con triángulo de rebote.',
+      'ch4-h2': 'Sin cables ni pantallas.',
+      'ch4-p': 'Un formato compacto que reemplaza el futbolín grande y se guarda fácilmente cuando termina la partida.',
+      'ch5-h2': 'Contenido del set.',
+      'ch5-p': 'Tablero de madera sellada, 2 varas de 90 cm extraíbles, 3 pelotas de 20 mm y topes de goma.',
+      'videos-h2': 'En acción.',
+      'videos-p': 'Tres ángulos reales de juego en mesa.',
+      'checkout-h2': 'Reserva el tuyo.',
+      'checkout-p': '<strong>$75 USD</strong> por lanzamiento (regular $89 USD). Coordina la entrega por WhatsApp y <strong>paga por transferencia al recibir</strong>.'
+    }
+  };
+
+  function applyCopyVariant(name) {
+    const dict = copyVariants[name];
+    if (!dict) return;
+    document.querySelectorAll('[data-copy]').forEach(el => {
+      const key = el.dataset.copy;
+      if (dict[key]) el.innerHTML = dict[key];
+    });
+  }
+
+  const urlVariant = new URLSearchParams(window.location.search).get('v');
+  if (urlVariant && copyVariants[urlVariant]) {
+    applyCopyVariant(urlVariant);
+  }
+
+  window.addEventListener('message', (event) => {
+    if (event.data && event.data.type === 'setCopyVariant') {
+      applyCopyVariant(event.data.variant);
+    }
+  });
 })();

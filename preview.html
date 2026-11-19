@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WoodGool — Preview Interactivo de Textos y Vista Móvil/Desktop</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@700;800&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0B0B0A;
+      color: #F5F2EB;
+      font-family: 'DM Sans', Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .topbar {
+      background: #141413;
+      border-bottom: 1px solid rgba(245, 242, 235, 0.14);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      z-index: 10;
+    }
+    .brand-tag {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-tag span {
+      background: rgba(217, 107, 67, 0.2);
+      color: #F79974;
+      border: 1px solid rgba(217, 107, 67, 0.4);
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 99px;
+      letter-spacing: 1px;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .group-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #9E9A90;
+      margin-right: 4px;
+    }
+    button, a.pill {
+      background: #1D1D1B;
+      color: #D8D4CB;
+      border: 1px solid rgba(245, 242, 235, 0.15);
+      padding: 7px 13px;
+      border-radius: 6px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    button:hover, a.pill:hover {
+      border-color: #D4AA78;
+      color: #FFF;
+    }
+    button.active {
+      background: #D4AA78;
+      color: #080808;
+      border-color: #D4AA78;
+      font-weight: 700;
+    }
+    .divider {
+      width: 1px;
+      height: 22px;
+      background: rgba(245, 242, 235, 0.15);
+      margin: 0 6px;
+    }
+    .stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: radial-gradient(circle at 50% 0%, #191714 0%, #070707 70%);
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(245, 242, 235, 0.18);
+      border-radius: 12px;
+      background: #050505;
+      transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.8);
+    }
+    iframe.mobile {
+      width: 390px;
+      max-width: 100%;
+      border-radius: 28px;
+      border: 8px solid #222220;
+    }
+    .desc-bar {
+      background: #0F0F0E;
+      border-top: 1px solid rgba(245, 242, 235, 0.1);
+      padding: 8px 20px;
+      font-size: 12px;
+      color: #A39E93;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .desc-bar strong { color: #D4AA78; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand-tag">
+      WOODGOOL <span>PREVIEW DE VARIACIONES</span>
+    </div>
+
+    <div class="controls">
+      <span class="group-label">Tono de textos:</span>
+      <button type="button" class="active" data-variant="directo">1. Directo (Meta Ads)</button>
+      <button type="button" data-variant="retador">2. Social / Retador</button>
+      <button type="button" data-variant="minimalista">3. Minimalista</button>
+
+      <div class="divider"></div>
+
+      <span class="group-label">Vista:</span>
+      <button type="button" class="active" data-view="desktop">Escritorio</button>
+      <button type="button" data-view="mobile">Celular (390px)</button>
+
+      <div class="divider"></div>
+      <a class="pill" id="open-full" href="index.html?v=directo" target="_blank">Abrir pantalla completa ↗</a>
+      <a class="pill" href="identidad.html">Stickers QR ↗</a>
+    </div>
+  </div>
+
+  <div class="stage">
+    <iframe id="preview-frame" src="index.html?v=directo" title="Preview de la web WoodGool"></iframe>
+  </div>
+
+  <div class="desc-bar">
+    <span id="variant-desc"><strong>Variación 1 (Directo):</strong> Corto y al grano, pensado para tráfico de Meta Ads y cierre rápido por WhatsApp. Sin mencionar cantidades de stock.</span>
+    <span>Las imágenes actuales funcionan como referencia visual hasta subir las fotos reales de tus tableros.</span>
+  </div>
+
+  <script>
+    const frame = document.getElementById('preview-frame');
+    const desc = document.getElementById('variant-desc');
+    const openFull = document.getElementById('open-full');
+
+    const descriptions = {
+      directo: '<strong>Variación 1 (Directo):</strong> Corto y al grano, pensado para tráfico de Meta Ads y cierre rápido por WhatsApp. Sin mencionar cantidades de stock.',
+      retador: '<strong>Variación 2 (Social / Retador):</strong> Tono cercano de revancha y pique entre amigos ("El que pierde paga la siguiente"). Ideal para Reels e Instagram.',
+      minimalista: '<strong>Variación 3 (Minimalista):</strong> Frases secas y limpias de producto ("Dos varas. Una pelota. Tu mesa."). Cero adorno.'
+    };
+
+    document.querySelectorAll('[data-variant]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-variant]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const v = btn.dataset.variant;
+        desc.innerHTML = descriptions[v];
+        openFull.href = 'index.html?v=' + v;
+        if (frame.contentWindow) {
+          frame.contentWindow.postMessage({ type: 'setCopyVariant', variant: v }, '*');
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-view]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-view]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        frame.classList.toggle('mobile', btn.dataset.view === 'mobile');
+      });
+    });
+  </script>
+</body>
+</html>
