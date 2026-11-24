@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>WoodGool — Stickers con QR Estilo Firefox (Logo en el Centro) &amp; 9 Logos SVG</title>
+  <title>WoodGool — 8 Variantes de Stickers con QR Estilo Firefox &amp; Logos SVG</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Manrope:wght@700;800&display=swap');
     :root {
       --bg: #070707;
       --card: #111110;
@@ -20,17 +20,17 @@
       background: var(--bg);
       color: var(--ink);
       font-family: 'DM Sans', Arial, sans-serif;
-      padding: 32px 5% 80px;
-      line-height: 1.6;
+      padding: 28px 5% 80px;
+      line-height: 1.5;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid var(--line);
-      padding-bottom: 20px;
+      padding-bottom: 18px;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
     }
     header strong {
       font-family: 'Manrope', sans-serif;
@@ -39,7 +39,7 @@
     }
     .header-links {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       align-items: center;
       font-size: 13px;
     }
@@ -56,9 +56,7 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-    .btn-pill:hover {
-      background: var(--gold);
-    }
+    .btn-pill:hover { background: var(--gold); }
     .btn-pill.outline {
       background: transparent;
       color: var(--ink);
@@ -69,14 +67,6 @@
       color: var(--gold);
     }
     h1, h2, h3 { font-family: 'Manrope', sans-serif; }
-    .eyebrow {
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: var(--gold);
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
     .label {
       font-size: 11px;
       letter-spacing: 1.5px;
@@ -85,22 +75,21 @@
       text-transform: uppercase;
     }
 
-    /* ESTUDIO DE STICKERS + QR ESTILO FIREFOX (ARRIBA PROTAGONISTA) */
+    /* PANEL DE CONTROL SUPERIOR */
     .sticker-section {
-      margin: 28px 0 55px;
-      padding: 34px;
+      margin: 24px 0 50px;
+      padding: 30px;
       background: var(--card);
       border: 1px solid var(--gold);
       border-radius: 16px;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.65);
     }
     .qr-controls {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 14px;
       align-items: end;
-      margin: 22px 0 28px;
-      padding: 20px;
+      margin: 18px 0 28px;
+      padding: 18px;
       background: #090908;
       border: 1px solid var(--line);
       border-radius: 10px;
@@ -124,298 +113,381 @@
       font: inherit;
       font-size: 13px;
     }
-    .sticker-wrap {
-      display: flex;
-      gap: 36px;
-      flex-wrap: wrap;
-      align-items: center;
-      margin: 20px 0;
+
+    /* GRILLA DE LAS 8 VARIANTES DE STICKERS */
+    .variants-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+      gap: 28px;
+      align-items: start;
     }
-    /* Sticker Rectangular 80x40mm (460x230px en pantalla) */
-    .sticker {
-      width: 460px;
-      height: 230px;
-      background: #080808;
-      color: #F5F2EB;
-      border: 1px solid rgba(245, 242, 235, 0.25);
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 22px 26px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.75);
-      transition: all 0.25s;
-    }
-    .sticker.sticker-light {
-      background: #FFFFFF;
-      color: #1C1C1B;
-      border-color: #D5D1C8;
-    }
-    .sticker-left {
+    .variant-card {
+      background: #0A0A09;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      width: 56%;
+      align-items: center;
+      gap: 14px;
     }
-    .sticker-left img {
+    .variant-head {
       width: 100%;
-      height: 132px;
-      object-fit: contain;
-      object-position: left center;
-    }
-    .sticker-meta {
-      font-size: 9.5px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      opacity: 0.78;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 1.2px;
       font-weight: 700;
-      line-height: 1.4;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
     }
-    /* CAJA DEL QR ESTILO FIREFOX (CON LOGO CENTRAL INTEGRADO) */
-    .qr-box {
+    .variant-head span:last-child {
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    /* BASE COMPARTIDA DE QR ESTILO FIREFOX (SIN BORDES GRISES FEOS) */
+    .qr-wrap {
       position: relative;
-      width: 168px;
-      height: 168px;
-      background: #0E0E0E;
-      padding: 10px;
-      border-radius: 16px;
+      width: 136px;
+      height: 136px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      border: 1.5px solid rgba(245, 242, 235, 0.22);
-      overflow: hidden;
     }
-    .qr-box.qr-classic-white {
-      background: #FFFFFF;
-      border-color: rgba(0, 0, 0, 0.15);
-    }
-    .qr-box img#qr-image {
+    .qr-wrap img.qr-matrix {
       width: 100%;
       height: 100%;
       object-fit: contain;
       display: block;
-      border-radius: 6px;
     }
-    /* EMBLEMA CENTRAL DENTRO DEL QR (ESTILO FIREFOX) */
-    .qr-center-badge {
+    .qr-badge {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 44px;
-      height: 44px;
-      border-radius: 11px;
-      background: #0E0E0E;
-      border: 2.5px solid #0E0E0E;
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: #080808;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 4px;
-      box-shadow: 0 0 0 2px rgba(245, 242, 235, 0.15);
+      padding: 3px;
+      box-shadow: 0 0 0 3px #080808;
     }
-    .qr-box.qr-classic-white .qr-center-badge {
-      background: #FFFFFF;
-      border-color: #FFFFFF;
-      box-shadow: 0 0 0 2px rgba(28, 28, 27, 0.12);
+    .qr-badge.badge-on-light {
+      background: #F5F2EB;
+      box-shadow: 0 0 0 3px #F5F2EB;
     }
-    .qr-center-badge svg {
+    .qr-badge svg {
       width: 100%;
       height: 100%;
       display: block;
     }
 
-    /* Sticker Circular Ø 50mm */
-    .round {
-      width: 230px;
-      height: 230px;
-      border-radius: 50%;
+    /* =====================================================
+       8 DISEÑOS DE STICKER (PANTALLA + IMPRESIÓN EXACTA)
+       ===================================================== */
+
+    /* Base Rectangular 80 x 40 mm (360 x 180 px en pantalla) */
+    .st-rect {
+      width: 360px;
+      height: 180px;
+      border-radius: 14px;
       background: #080808;
-      border: 1px solid rgba(245, 242, 235, 0.25);
-      display: grid;
-      place-items: center;
-      padding: 26px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.75);
-      transition: all 0.25s;
+      color: #F5F2EB !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.7);
+      border: 1px solid rgba(245,242,235,0.18);
     }
-    .round.sticker-light {
-      background: #FFFFFF;
-      border-color: #D5D1C8;
+
+    /* VARIANTE 01: SIN REDUNDANCIA (Tipografía WOOD/GOOL gigante a la izq + Icono SOLO dentro del QR) */
+    .st-v1 .left-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2px;
     }
-    .round img {
-      width: 100%;
+    .st-v1 .word-big {
+      font-family: 'Manrope', sans-serif;
+      font-size: 46px;
+      font-weight: 800;
+      line-height: 0.94;
+      letter-spacing: -2px;
+      color: #F5F2EB !important;
+      position: relative;
+    }
+    .st-v1 .word-big .dot-l {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #D96B43;
+      margin-left: 2px;
+      vertical-align: baseline;
+    }
+    .st-v1 .sub-tag {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 2.6px;
+      color: #D4AA78 !important;
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+
+    /* VARIANTE 02: ENCUENTRO 2 JUGADORES (Cancha arriba + WoodGool abajo a la izq + QR con pelota central) */
+    .st-v2 .left-col {
+      width: 54%;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .st-v2 .left-col img {
+      width: 100%;
+      height: 130px;
       object-fit: contain;
     }
 
-    /* Solo QR Redondo / Cuadrado Estilo Firefox para Sticker Pequeño */
-    .qr-only-sticker {
-      width: 195px;
-      height: 195px;
-      border-radius: 26px;
+    /* VARIANTE 03: BICOLOR ARQUITECTÓNICO (Izquierda Negro #080808 / Derecha Marfil #F5F2EB para lectura QR infalible) */
+    .st-v3 {
+      padding: 0;
+    }
+    .st-v3 .half-dark {
+      width: 54%;
+      height: 100%;
       background: #080808;
-      border: 1px solid rgba(245, 242, 235, 0.25);
-      padding: 16px;
+      padding: 18px 16px 18px 20px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.75);
+      justify-content: center;
     }
-    .qr-only-sticker.sticker-light {
-      background: #FFFFFF;
-      color: #1C1C1B;
-      border-color: #D5D1C8;
-    }
-
-    .print-label {
-      font-size: 10.5px;
-      letter-spacing: 1.3px;
-      margin-top: 12px;
-      color: var(--muted);
-      text-transform: uppercase;
-    }
-
-    /* TARJETAS DE LOGOS */
-    .toolbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin: 36px 0 20px;
-      padding: 16px 20px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-    }
-    .family-title {
-      font-size: 13px;
-      letter-spacing: 1.6px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin: 34px 0 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--line);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-      gap: 20px;
-    }
-    .option {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 22px;
-      background: var(--card);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .option.favorite-highlight {
-      border-color: rgba(212, 170, 120, 0.5);
-      background: linear-gradient(160deg, #161411 0%, #0E0E0D 100%);
-    }
-    .option:hover, .option.selected {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-    .preview-stage {
-      width: 100%;
-      height: 180px;
-      border-radius: 8px;
-      background: #070707;
-      border: 1px solid rgba(255,255,255,0.06);
+    .st-v3 .half-light {
+      width: 46%;
+      height: 100%;
+      background: #F5F2EB;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 18px;
-      margin: 12px 0;
-      transition: background 0.25s;
-    }
-    body.light-preview .preview-stage {
-      background: #F5F2EB;
-      border-color: #DCD6C8;
-    }
-    .preview-stage img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-    .option h3 { font-size: 18px; margin: 4px 0 6px; }
-    .option p { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
-    .links {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid var(--line);
-      padding-top: 12px;
-      font-size: 12px;
+      padding: 14px;
     }
 
-    @media (max-width: 800px) {
-      .sticker { width: 100%; height: auto; aspect-ratio: 2/1; padding: 14px; }
-      .qr-box { width: 125px; height: 125px; }
+    /* VARIANTE 04: SELLO DE TALLER CON FILETE INTERIOR (Marco fino + Bauhaus completo + QR limpio) */
+    .st-v4 {
+      padding: 20px 24px;
+    }
+    .st-v4::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(212, 170, 120, 0.42);
+      border-radius: 10px;
+      pointer-events: none;
+    }
+
+    /* VARIANTE 05: CUADRADO QR FIREFOX PURO (45 x 45 mm -> 210 x 210 px) - CORREGIDO TEXTO BLANCO */
+    .st-square {
+      width: 210px;
+      height: 210px;
+      border-radius: 22px;
+      background: #080808;
+      color: #F5F2EB !important;
+      border: 1px solid rgba(245,242,235,0.2);
+      padding: 14px 16px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.7);
+    }
+    .st-square .sq-title {
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #F5F2EB !important;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .st-square .sq-title i {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #D96B43;
+      display: inline-block;
+    }
+    .st-square .sq-sub {
+      font-size: 7.5px;
+      letter-spacing: 2.2px;
+      color: #D4AA78 !important;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* VARIANTE 06: CUADRADO CON CABECERA DE MARCA Y MARCO FINO (45 x 45 mm) */
+    .st-v6::after {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(245, 242, 235, 0.25);
+      border-radius: 17px;
+      pointer-events: none;
+    }
+
+    /* VARIANTE 07: CIRCULAR SELLO VERTICAL CENTRADO (Ø 50 mm -> 210 x 210 px) */
+    .st-round {
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      background: #080808;
+      color: #F5F2EB !important;
+      border: 1px solid rgba(245,242,235,0.22);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.7);
+    }
+    .st-round::after {
+      content: '';
+      position: absolute;
+      inset: 7px;
+      border: 1.2px solid rgba(212, 170, 120, 0.45);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* VARIANTE 08: CIRCULAR CON QR FIREFOX CENTRAL (Ø 55 mm -> 220 x 220 px) */
+    .st-round-qr {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: #080808;
+      color: #F5F2EB !important;
+      border: 1px solid rgba(245,242,235,0.22);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px 18px;
+      position: relative;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.7);
+    }
+    .st-round-qr::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(245, 242, 235, 0.22);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* REGLAS DE IMPRESIÓN A ESCALA REAL MILIMÉTRICA (SIN TEXTO NEGRO SOBRE NEGRO NI CABECERAS DEL NAVEGADOR) */
+    @page {
+      size: A4;
+      margin: 10mm;
     }
     @media print {
-      header, .toolbar, .family-title, .grid, .qr-controls, .no-print {
+      header, .qr-controls, .no-print, .variant-head {
         display: none !important;
       }
       body {
         background: #FFFFFF !important;
-        color: #000000 !important;
-        padding: 8mm !important;
+        padding: 0 !important;
+        margin: 0 !important;
       }
       .sticker-section {
         margin: 0 !important;
         padding: 0 !important;
         border: 0 !important;
         background: transparent !important;
+      }
+      .variants-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 6mm !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+      }
+      .variant-card {
+        background: transparent !important;
+        border: 0 !important;
+        padding: 0 !important;
+        page-break-inside: avoid;
+      }
+      .st-rect, .st-square, .st-round, .st-round-qr, .half-dark, .half-light, .qr-badge {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
         box-shadow: none !important;
       }
-      .sticker {
-        box-shadow: none !important;
+      /* Medidas exactas de imprenta */
+      .st-rect {
         width: 80mm !important;
         height: 40mm !important;
-        padding: 3.5mm 4.5mm !important;
-        border-radius: 2.5mm !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        border-radius: 3mm !important;
+        padding: 4mm 5mm !important;
       }
-      .sticker-left img { height: 22mm !important; }
-      .sticker-meta { font-size: 5.5pt !important; }
-      .qr-box {
+      .st-v3 { padding: 0 !important; }
+      .st-v3 .half-dark { padding: 4mm !important; }
+      .st-v3 .half-light { padding: 3mm !important; }
+      .st-rect .qr-wrap {
         width: 30mm !important;
         height: 30mm !important;
-        padding: 1.8mm !important;
-        border-radius: 2.5mm !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
       }
-      .qr-center-badge {
-        width: 7.8mm !important;
-        height: 7.8mm !important;
-        border-radius: 1.8mm !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+      .st-v1 .word-big { font-size: 27pt !important; }
+      .st-v1 .sub-tag { font-size: 6pt !important; letter-spacing: 1.8pt !important; }
+      .st-square {
+        width: 45mm !important;
+        height: 45mm !important;
+        border-radius: 4.5mm !important;
+        padding: 3mm !important;
       }
-      .round {
-        box-shadow: none !important;
+      .st-square .qr-wrap {
+        width: 31mm !important;
+        height: 31mm !important;
+      }
+      .st-square .sq-title {
+        font-size: 9.5pt !important;
+        color: #F5F2EB !important;
+      }
+      .st-square .sq-sub {
+        font-size: 5pt !important;
+        color: #D4AA78 !important;
+      }
+      .st-round {
         width: 50mm !important;
         height: 50mm !important;
-        padding: 6mm !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        padding: 4.5mm !important;
       }
-      .qr-only-sticker {
-        box-shadow: none !important;
-        width: 40mm !important;
-        height: 40mm !important;
-        padding: 3mm !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+      .st-round-qr {
+        width: 55mm !important;
+        height: 55mm !important;
+        padding: 4mm !important;
+      }
+      .st-round-qr .qr-wrap {
+        width: 32mm !important;
+        height: 32mm !important;
+      }
+      .qr-badge {
+        width: 8mm !important;
+        height: 8mm !important;
+        border-radius: 2mm !important;
       }
     }
   </style>
@@ -423,313 +495,239 @@
 <body>
 
   <header>
-    <strong>WoodGool / Stickers con QR Estilo Firefox &amp; Logos Favoritos</strong>
+    <strong>WoodGool / 8 Variantes de Stickers con QR Estilo Firefox</strong>
     <div class="header-links">
-      <a href="variantes-logo.html">Ver lámina 10 variantes ↗</a>
+      <a class="btn-pill outline" href="preview.html">Preview Textos Web ↗</a>
       <a class="btn-pill" href="index.html">← Volver a la Web Principal</a>
     </div>
   </header>
 
-  <!-- GENERADOR DE STICKERS CON QR ESTILO FIREFOX (CON LOGO EN EL CENTRO + WHATSAPP DIRECTO) -->
   <section id="stickers" class="sticker-section">
     <div class="no-print">
-      <p class="label">QR CON CORRECCIÓN DE ERROR NIVEL H (30%) · LOGO INTEGRADO EN EL CENTRO ESTILO FIREFOX</p>
-      <h1 style="font-size:clamp(26px,3.2vw,40px);letter-spacing:-1.5px;margin:4px 0 8px;">
-        Stickers con QR directo a WhatsApp + Logo en el Centro
+      <p class="label">CORREGIDOS PARA IMPRENTA · CERO ELEMENTOS REPETIDOS · TEXTO BLANCO FIJO EN PDF</p>
+      <h1 style="font-size:clamp(24px,3vw,36px);letter-spacing:-1.2px;margin:4px 0 8px;">
+        8 Variantes de Sticker (Rectangulares 80×40 mm, Cuadrados 45×45 mm y Circulares Ø 50–55 mm)
       </h1>
-      <p style="color:var(--muted);font-size:14px;max-width:860px;">
-        Configuré el código QR con <strong>redundancia alta (Nivel H)</strong> al estilo Firefox: con <strong>módulos blancos sobre fondo negro</strong> y el <strong>emblema de WoodGool incrustado en el centro del QR</strong>. Apunta directamente a WhatsApp con el mensaje de reserva listo. ¡Pruébalo ahora mismo apuntando con la cámara de tu celular a la pantalla!
+      <p style="color:var(--muted);font-size:14px;max-width:900px;">
+        Corregí los tres detalles de tu captura anterior: <strong>1)</strong> quité el borde gris alrededor del QR y evité que el icono cuadrado se repita dos veces en el mismo sticker (Variante 01), <strong>2)</strong> fijé el texto blanco <code>WOODGOOL</code> en el sticker cuadrado para que nunca salga negro sobre negro al imprimir en PDF, y <strong>3)</strong> rediseñé los circulares con composición vertical/anillo para que no queden huecos vacíos arriba y abajo.
       </p>
 
       <div class="qr-controls">
         <div>
-          <label for="wa-target-select">1. ¿A dónde envía el QR del Sticker?</label>
+          <label for="wa-target-select">1. ¿A dónde envía el QR de todos los stickers?</label>
           <select id="wa-target-select">
             <option value="593987861804">Chat WhatsApp Business Oficial (+593 98 786 1804)</option>
             <option value="catalog">Catálogo Directo WhatsApp (wa.me/c/593987861804)</option>
             <option value="web">Web Pública GitHub Pages (ricciyazigi.github.io/woodgool)</option>
             <option value="593980873462">Respaldo Quito (+593 98 087 3462)</option>
             <option value="593989347024">Respaldo Ibarra (+593 98 934 7024)</option>
-            <option value="custom">Escribir otro enlace / URL personalizada</option>
           </select>
         </div>
 
         <div>
-          <label for="qr-logo-select">2. Símbolo dentro del centro del QR</label>
-          <select id="qr-logo-select">
-            <option value="bauhaus">Bloque Diagonal + Pelota Terracota (Estilo 06)</option>
-            <option value="encuentro">2 Jugadores Encuentro + Pelota (Estilo 03)</option>
-            <option value="wg">Monograma WG + Punto Terracota</option>
-            <option value="ball">Pelota Terracota Minimalista</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="qr-style-select">3. Estilo del QR y Sticker</label>
-          <select id="qr-style-select">
-            <option value="firefox-dark">QR Oscuro Estilo Firefox (Blanco sobre Negro)</option>
-            <option value="dark-whiteqr">Sticker Negro + QR Clásico Blanco</option>
-            <option value="light-all">Sticker Blanco + QR Clásico</option>
+          <label for="print-filter-select">2. ¿Qué quieres imprimir en el PDF?</label>
+          <select id="print-filter-select">
+            <option value="all">Imprimir las 8 variantes juntas (Para comparar)</option>
+            <option value="v1">Plancha de 10 × Variante 01 (Rectangular Tipográfico + QR Icono)</option>
+            <option value="v2">Plancha de 10 × Variante 02 (Rectangular Encuentro 2 Jugadores)</option>
+            <option value="v3">Plancha de 10 × Variante 03 (Rectangular Bicolor Negro/Marfil)</option>
+            <option value="v4">Plancha de 10 × Variante 04 (Rectangular Sello con Filete)</option>
+            <option value="v5">Plancha de 12 × Variante 05 (Cuadrado QR Firefox Puro)</option>
+            <option value="v7">Plancha de 12 × Variante 07 (Circular Sello Vertical)</option>
+            <option value="v8">Plancha de 12 × Variante 08 (Circular con QR Central)</option>
           </select>
         </div>
 
         <div>
           <button type="button" class="btn-pill" style="width:100%;padding:12px;" onclick="window.print()">
-            Imprimir / Guardar PDF (80×40mm) 🖨️
+            Imprimir / Guardar PDF a Escala 🖨️
           </button>
         </div>
       </div>
-
-      <div id="custom-url-wrap" style="display:none;margin-bottom:20px;">
-        <label for="qr-url-input" style="font-size:11px;color:var(--gold);display:block;margin-bottom:5px;">Enlace personalizado codificado en el QR:</label>
-        <input type="text" id="qr-url-input" style="width:100%;background:#151514;border:1px solid var(--gold);color:var(--ink);padding:10px 14px;border-radius:6px;" value="https://wa.me/593980873462">
-      </div>
     </div>
 
-    <!-- PREVISUALIZACIÓN A ESCALA DE LOS 3 FORMATOS DE STICKER -->
-    <div class="sticker-wrap">
-      <!-- 1. Sticker Rectangular 80 x 40 mm -->
-      <div>
-        <div class="sticker" id="rect-sticker">
-          <div class="sticker-left" style="justify-content:center;">
-            <img class="chosen-sticker-logo" src="assets/logos/06-monograma-bauhaus.svg" alt="Logo seleccionado en sticker rectangular" style="height:165px;">
-          </div>
+    <!-- GRILLA CON LAS 8 VARIANTES -->
+    <div class="variants-grid" id="variants-container">
 
-          <!-- QR Estilo Firefox con Logo Central -->
-          <div class="qr-box" id="qr-box-main" title="Escanea este QR con la cámara de tu teléfono">
-            <img id="qr-image" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&ecc=H&margin=1&color=F5F2EB&bgcolor=0E0E0E&data=https%3A%2F%2Fwa.me%2F593980873462" alt="Código QR WoodGool con logo central">
-            <div class="qr-center-badge" id="qr-center-badge">
-              <!-- Se inyecta por JS el mini-icono SVG seleccionado -->
+      <!-- VARIANTE 01: RECTANGULAR SIN REDUNDANCIA (Letras grandes a la izq + Icono SOLO dentro del QR) -->
+      <div class="variant-card" data-vid="v1">
+        <div class="variant-head">
+          <span>01 · RECTANGULAR SIN REDUNDANCIA (RECOMENDADO)</span>
+          <span>80 × 40 MM</span>
+        </div>
+        <div class="st-rect st-v1">
+          <div class="left-col">
+            <div class="word-big">WOOD<br>GOOL<span class="dot-l"></span></div>
+            <div class="sub-tag">SOCCER TABLE GAME</div>
+          </div>
+          <div class="qr-wrap">
+            <img class="qr-matrix qr-dark" alt="QR WoodGool">
+            <div class="qr-badge badge-bauhaus"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 02: RECTANGULAR ENCUENTRO (2 Jugadores apilado grande a la izq + QR con pelota/vara) -->
+      <div class="variant-card" data-vid="v2">
+        <div class="variant-head">
+          <span>02 · RECTANGULAR ENCUENTRO (2 JUGADORES)</span>
+          <span>80 × 40 MM</span>
+        </div>
+        <div class="st-rect st-v2">
+          <div class="left-col">
+            <img src="assets/logos/01-encuentro.svg" alt="WoodGool Encuentro">
+            <span style="font-size:8.5px;letter-spacing:2.4px;color:#D4AA78;font-weight:700;margin-top:2px;">SOCCER TABLE GAME</span>
+          </div>
+          <div class="qr-wrap">
+            <img class="qr-matrix qr-dark" alt="QR WoodGool">
+            <div class="qr-badge badge-encuentro"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 03: RECTANGULAR BICOLOR ARQUITECTÓNICO (Mitad Negro / Mitad Marfil) -->
+      <div class="variant-card" data-vid="v3">
+        <div class="variant-head">
+          <span>03 · RECTANGULAR BICOLOR (NEGRO + MARFIL)</span>
+          <span>80 × 40 MM</span>
+        </div>
+        <div class="st-rect st-v3">
+          <div class="half-dark">
+            <img src="assets/logos/06-monograma-bauhaus.svg" alt="WoodGool Bauhaus" style="width:100%;height:125px;object-fit:contain;object-position:left center;">
+          </div>
+          <div class="half-light">
+            <div class="qr-wrap" style="width:132px;height:132px;">
+              <img class="qr-matrix qr-light" alt="QR WoodGool Claro">
+              <div class="qr-badge badge-on-light badge-bauhaus-light"></div>
             </div>
           </div>
         </div>
-        <p class="print-label no-print">1. STICKER RECTANGULAR (80 × 40 MM) · LOGO + QR FIREFOX WHATSAPP</p>
       </div>
 
-      <!-- 2. Sticker Circular Ø 50 mm -->
-      <div>
-        <div class="round" id="round-sticker">
-          <img class="chosen-sticker-logo" src="assets/logos/06-monograma-bauhaus.svg" alt="Logo seleccionado en sticker circular">
+      <!-- VARIANTE 04: RECTANGULAR SELLO DE TALLER CON FILETE DORADO (Fusión 09 + QR Monograma WG) -->
+      <div class="variant-card" data-vid="v4">
+        <div class="variant-head">
+          <span>04 · RECTANGULAR SELLO CON FILETE INTERIOR</span>
+          <span>80 × 40 MM</span>
         </div>
-        <p class="print-label no-print">2. STICKER CIRCULAR DE MARCA (Ø 50 MM)</p>
-      </div>
-
-      <!-- 3. Sticker Cuadrado Solo QR Firefox 40 x 40 mm -->
-      <div>
-        <div class="qr-only-sticker" id="square-qr-sticker">
-          <div class="qr-box" id="qr-box-secondary" style="width:142px;height:142px;padding:6px;border:0;">
-            <img id="qr-image-secondary" src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&ecc=H&margin=1&color=F5F2EB&bgcolor=0E0E0E&data=https%3A%2F%2Fwa.me%2F593980873462" alt="QR Secundario" style="width:100%;height:100%;object-fit:contain;">
-            <div class="qr-center-badge" id="qr-center-badge-secondary"></div>
+        <div class="st-rect st-v4">
+          <div style="width:55%;height:100%;display:flex;align-items:center;">
+            <img src="assets/logos/09-fusion-favoritos.svg" alt="WoodGool Fusión" style="width:100%;height:132px;object-fit:contain;object-position:left center;">
           </div>
-          <span style="font-family:'Manrope',sans-serif;font-size:11px;font-weight:800;letter-spacing:1.5px;">WOODGOOL</span>
+          <div class="qr-wrap" style="width:128px;height:128px;">
+            <img class="qr-matrix qr-dark" alt="QR WoodGool">
+            <div class="qr-badge badge-wg"></div>
+          </div>
         </div>
-        <p class="print-label no-print">3. STICKER SOLO QR ESTILO FIREFOX (40 × 40 MM)</p>
       </div>
-    </div>
 
-    <p class="no-print" id="selection-status" style="font-size:13px;color:var(--gold);margin-top:12px;font-weight:700;">
-      ✓ Mostrando en sticker: 06 / Impacto Diagonal Europeo (WOOD / GOOL) · QR directo a WhatsApp (+593 98 087 3462).
-    </p>
+      <!-- VARIANTE 05: CUADRADO QR FIREFOX PURO (Corregido texto WOODGOOL en blanco brillante) -->
+      <div class="variant-card" data-vid="v5">
+        <div class="variant-head">
+          <span>05 · CUADRADO QR FIREFOX (TEXTO BLANCO CORREGIDO)</span>
+          <span>45 × 45 MM</span>
+        </div>
+        <div class="st-square">
+          <div class="qr-wrap" style="width:146px;height:146px;">
+            <img class="qr-matrix qr-dark" alt="QR WoodGool">
+            <div class="qr-badge badge-bauhaus"></div>
+          </div>
+          <div style="text-align:center;">
+            <div class="sq-title">WOODGOOL<i></i></div>
+            <div class="sq-sub">SOCCER TABLE GAME</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 06: CUADRADO CON CABECERA ARRIBA Y MARCO INTERIOR -->
+      <div class="variant-card" data-vid="v6">
+        <div class="variant-head">
+          <span>06 · CUADRADO SELLO CON CABECERA</span>
+          <span>45 × 45 MM</span>
+        </div>
+        <div class="st-square st-v6">
+          <div class="sq-title" style="margin-top:2px;">WOODGOOL<i></i></div>
+          <div class="qr-wrap" style="width:134px;height:134px;">
+            <img class="qr-matrix qr-dark" alt="QR WoodGool">
+            <div class="qr-badge badge-encuentro"></div>
+          </div>
+          <div class="sq-sub" style="margin-bottom:2px;">HECHO EN ECUADOR</div>
+        </div>
+      </div>
+
+      <!-- VARIANTE 07: CIRCULAR SELLO VERTICAL CENTRADO (Sin huecos vacíos arriba/abajo) -->
+      <div class="variant-card" data-vid="v7">
+        <div class="variant-head">
+          <span>07 · CIRCULAR SELLO VERTICAL (SIN HUECOS)</span>
+          <span>Ø 50 MM</span>
+        </div>
+        <div class="st-round">
+          <span style="font-size:7.5px;letter-spacing:2.4px;color:#D4AA78;font-weight:700;margin-bottom:6px;">SOCCER TABLE GAME</span>
+          <img src="assets/logos/01-encuentro.svg" alt="WoodGool Vertical" style="width:138px;height:105px;object-fit:contain;">
+          <span style="font-size:7px;letter-spacing:2px;color:#9E9A90;font-weight:700;margin-top:6px;">HECHO EN ECUADOR</span>
+        </div>
+      </div>
+
+      <!-- VARIANTE 08: CIRCULAR CON QR FIREFOX EN EL CENTRO -->
+      <div class="variant-card" data-vid="v8">
+        <div class="variant-head">
+          <span>08 · CIRCULAR CON QR FIREFOX CENTRAL</span>
+          <span>Ø 55 MM</span>
+        </div>
+        <div class="st-round-qr">
+          <div style="font-family:'Manrope',sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;color:#F5F2EB;margin-top:4px;">
+            WOODGOOL<span style="color:#D96B43;">.</span>
+          </div>
+          <div class="qr-wrap" style="width:128px;height:128px;">
+            <img class="qr-matrix qr-dark" alt="QR WoodGool">
+            <div class="qr-badge badge-bauhaus"></div>
+          </div>
+          <div style="font-size:7px;letter-spacing:2px;color:#D4AA78;font-weight:700;margin-bottom:4px;">
+            SOCCER TABLE GAME
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
-
-  <!-- SELECTOR DE LOGOS (DESTACANDO LOS FAVORITOS DE TUS CAPTURAS + LA NUEVA FUSIÓN 09) -->
-  <div class="toolbar no-print">
-    <span style="font-size:13px;color:var(--muted);">Haz clic en <strong>«Probar en Sticker + QR»</strong> en cualquiera de tus favoritos para cambiar el sticker de arriba:</span>
-    <div style="display:flex;gap:10px;">
-      <button type="button" class="btn-pill outline active" id="btn-bg-dark">Ver Logos sobre Fondo Negro</button>
-      <button type="button" class="btn-pill outline" id="btn-bg-light">Ver Logos sobre Fondo Claro</button>
-    </div>
-  </div>
-
-  <main class="no-print">
-    <h2 class="family-title">★ Tus Favoritos (según tus capturas) + Nueva Fusión 09</h2>
-    <div class="grid">
-      <article class="option favorite-highlight selected" data-card="06-monograma-bauhaus">
-        <div>
-          <span class="label">★ TU CAPTURA · 06 / IMPACTO DIAGONAL EUROPEO</span>
-          <h3>Bauhaus + WOOD / GOOL con punto en la L</h3>
-          <div class="preview-stage">
-            <img class="logo-img" data-base="06-monograma-bauhaus" src="assets/logos/06-monograma-bauhaus.svg" alt="06 Monograma Bauhaus">
-          </div>
-          <p>El que seleccionaste en tus capturas: bloque jugador en diagonal a punto de impactar la pelota terracota junto a WOOD / GOOL apilado con el punto en la L.</p>
-        </div>
-        <div class="links">
-          <a href="assets/logos/06-monograma-bauhaus.svg" download>Descargar SVG ↓</a>
-          <button type="button" class="btn-pill" data-select-logo="06-monograma-bauhaus">Probar en Sticker + QR ↗</button>
-        </div>
-      </article>
-
-      <article class="option favorite-highlight" data-card="03-taller">
-        <div>
-          <span class="label">★ TU CAPTURA · 03 / ENCUENTRO HORIZONTAL</span>
-          <h3>Formato Header &amp; Etiqueta</h3>
-          <div class="preview-stage">
-            <img class="logo-img" data-base="03-taller" src="assets/logos/03-taller.svg" alt="03 Encuentro Horizontal">
-          </div>
-          <p>Tu segunda captura favorita: el símbolo Encuentro de dos jugadores enfrentados a la izquierda y el logotipo WoodGool horizontal a la derecha.</p>
-        </div>
-        <div class="links">
-          <a href="assets/logos/03-taller.svg" download>Descargar SVG ↓</a>
-          <button type="button" class="btn-pill" data-select-logo="03-taller">Probar en Sticker + QR ↗</button>
-        </div>
-      </article>
-
-      <article class="option favorite-highlight" data-card="09-fusion-favoritos">
-        <div>
-          <span class="label">★ NUEVO · 09 / FUSIÓN DE TUS 2 CAPTURAS</span>
-          <h3>Símbolo Encuentro + WOOD / GOOL Apilado</h3>
-          <div class="preview-stage">
-            <img class="logo-img" data-base="09-fusion-favoritos" src="assets/logos/09-fusion-favoritos.svg" alt="09 Fusion Favoritos">
-          </div>
-          <p>Combina exactamente los dos elementos que más te gustaron: el símbolo de los 2 jugadores en cancha (del 03) + las letras WOOD / GOOL con la pelota en la L (del 06).</p>
-        </div>
-        <div class="links">
-          <a href="assets/logos/09-fusion-favoritos.svg" download>Descargar SVG ↓</a>
-          <button type="button" class="btn-pill" data-select-logo="09-fusion-favoritos">Probar en Sticker + QR ↗</button>
-        </div>
-      </article>
-
-      <article class="option favorite-highlight" data-card="01-encuentro">
-        <div>
-          <span class="label">★ TU CAPTURA · 01 / ENCUENTRO PRO</span>
-          <h3>Vertical Clásico</h3>
-          <div class="preview-stage">
-            <img class="logo-img" data-base="01-encuentro" src="assets/logos/01-encuentro.svg" alt="01 Encuentro Pro">
-          </div>
-          <p>El emblema vertical clásico con el símbolo Encuentro arriba y WoodGool debajo.</p>
-        </div>
-        <div class="links">
-          <a href="assets/logos/01-encuentro.svg" download>Descargar SVG ↓</a>
-          <button type="button" class="btn-pill" data-select-logo="01-encuentro">Probar en Sticker + QR ↗</button>
-        </div>
-      </article>
-    </div>
-
-    <h2 class="family-title">Otras Variaciones Disponibles en Vector SVG</h2>
-    <div class="grid">
-      <article class="option" data-card="02-linea">
-        <div>
-          <span class="label">02 / ENCUENTRO CANCHA</span>
-          <h3>Geometría de Arcos y Saque</h3>
-          <div class="preview-stage">
-            <img class="logo-img" data-base="02-linea" src="assets/logos/02-linea.svg" alt="02 Encuentro Cancha">
-          </div>
-          <p>Integra las muescas de los arcos reglamentarios y el círculo central punteado.</p>
-        </div>
-        <div class="links">
-          <a href="assets/logos/02-linea.svg" download>Descargar SVG ↓</a>
-          <button type="button" class="btn-pill" data-select-logo="02-linea">Probar en Sticker + QR ↗</button>
-        </div>
-      </article>
-
-      <article class="option" data-card="04-sello">
-        <div>
-          <span class="label">04 / ENCUENTRO SELLO TALLER</span>
-          <h3>Placa de Ebanistería</h3>
-          <div class="preview-stage">
-            <img class="logo-img" data-base="04-sello" src="assets/logos/04-sello.svg" alt="04 Sello Taller">
-          </div>
-          <p>Sello cerrado con doble filete y leyenda «HECHO A MANO · ECUADOR».</p>
-        </div>
-        <div class="links">
-          <a href="assets/logos/04-sello.svg" download>Descargar SVG ↓</a>
-          <button type="button" class="btn-pill" data-select-logo="04-sello">Probar en Sticker + QR ↗</button>
-        </div>
-      </article>
-
-      <article class="option" data-card="05-monograma-wg">
-        <div>
-          <span class="label">05 / MONOGRAMA WG BLOQUE</span>
-          <h3>W + Bloque Jugador + G</h3>
-          <div class="preview-stage">
-            <img class="logo-img" data-base="05-monograma-wg" src="assets/logos/05-monograma-wg.svg" alt="05 Monograma WG Bloque">
-          </div>
-          <p>Las iniciales W y G unidas por el bloque jugador atravesado por la vara.</p>
-        </div>
-        <div class="links">
-          <a href="assets/logos/05-monograma-wg.svg" download>Descargar SVG ↓</a>
-          <button type="button" class="btn-pill" data-select-logo="05-monograma-wg">Probar en Sticker + QR ↗</button>
-        </div>
-      </article>
-
-      <article class="option" data-card="07-monograma-simetria">
-        <div>
-          <span class="label">07 / MONOGRAMA SIMETRÍA</span>
-          <h3>Dos Varas en Contrapunto</h3>
-          <div class="preview-stage">
-            <img class="logo-img" data-base="07-monograma-simetria" src="assets/logos/07-monograma-simetria.svg" alt="07 Monograma Simetria">
-          </div>
-          <p>Símbolo cuadrado minimalista con dos varas paralelas y tipografía espaciada.</p>
-        </div>
-        <div class="links">
-          <a href="assets/logos/07-monograma-simetria.svg" download>Descargar SVG ↓</a>
-          <button type="button" class="btn-pill" data-select-logo="07-monograma-simetria">Probar en Sticker + QR ↗</button>
-        </div>
-      </article>
-    </div>
-  </main>
 
   <script src="config.js"></script>
   <script>
     (function () {
-      let currentLogoBase = '06-monograma-bauhaus';
-      let qrStyle = 'firefox-dark'; // 'firefox-dark', 'dark-whiteqr', 'light-all'
-      let qrCenterLogo = 'bauhaus';
-
-      const rectSticker = document.querySelector('#rect-sticker');
-      const roundSticker = document.querySelector('#round-sticker');
-      const squareQrSticker = document.querySelector('#square-qr-sticker');
-      const stickerLogos = document.querySelectorAll('.chosen-sticker-logo');
-
       const waTargetSelect = document.querySelector('#wa-target-select');
-      const qrLogoSelect = document.querySelector('#qr-logo-select');
-      const qrStyleSelect = document.querySelector('#qr-style-select');
-      const customUrlWrap = document.querySelector('#custom-url-wrap');
-      const qrInput = document.querySelector('#qr-url-input');
+      const printFilterSelect = document.querySelector('#print-filter-select');
+      const container = document.querySelector('#variants-container');
+      const originalCardsHTML = container.innerHTML;
 
-      const qrBoxMain = document.querySelector('#qr-box-main');
-      const qrBoxSecondary = document.querySelector('#qr-box-secondary');
-      const qrImage = document.querySelector('#qr-image');
-      const qrImageSecondary = document.querySelector('#qr-image-secondary');
-      const badgeMain = document.querySelector('#qr-center-badge');
-      const badgeSecondary = document.querySelector('#qr-center-badge-secondary');
-      const statusText = document.querySelector('#selection-status');
+      function svgBauhaus(ink) {
+        return `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="88" height="88" rx="16" stroke="${ink}" stroke-width="8"/>
+          <path d="M10 62L90 24" stroke="${ink}" stroke-width="9" stroke-linecap="round"/>
+          <g transform="translate(48, 43) rotate(-22)">
+            <rect x="-13" y="-20" width="26" height="36" rx="4" fill="${ink}"/>
+            <rect x="-6" y="13" width="12" height="12" rx="2" fill="${ink}"/>
+          </g>
+          <circle cx="34" cy="74" r="12" fill="#D96B43"/>
+        </svg>`;
+      }
 
-      // SVGs de los emblemas que van DENTRO del centro del QR (Estilo Firefox)
-      function getCenterBadgeSVG(type, isLightQR) {
-        const ink = isLightQR ? '#1C1C1B' : '#F5F2EB';
-        const accent = '#D96B43';
-        if (type === 'bauhaus') {
-          return `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="6" width="88" height="88" rx="16" stroke="${ink}" stroke-width="8"/>
-            <path d="M10 62L90 24" stroke="${ink}" stroke-width="9" stroke-linecap="round"/>
-            <g transform="translate(48, 43) rotate(-22)">
-              <rect x="-13" y="-20" width="26" height="36" rx="4" fill="${ink}"/>
-              <rect x="-6" y="13" width="12" height="12" rx="2" fill="${ink}"/>
-            </g>
-            <circle cx="34" cy="74" r="12" fill="${accent}"/>
-          </svg>`;
-        } else if (type === 'encuentro') {
-          return `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 50H32M68 50H96" stroke="${ink}" stroke-width="8" stroke-linecap="round"/>
-            <rect x="18" y="26" width="20" height="38" rx="4" fill="${ink}"/>
-            <rect x="24" y="60" width="8" height="14" rx="2" fill="${ink}"/>
-            <rect x="62" y="26" width="20" height="38" rx="4" fill="${ink}"/>
-            <rect x="68" y="60" width="8" height="14" rx="2" fill="${ink}"/>
-            <circle cx="50" cy="50" r="10" fill="${accent}"/>
-          </svg>`;
-        } else if (type === 'wg') {
-          return `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="6" width="88" height="88" rx="18" stroke="${ink}" stroke-width="7"/>
-            <text x="46" y="66" text-anchor="middle" fill="${ink}" font-family="'Manrope',Arial,sans-serif" font-size="44" font-weight="800" letter-spacing="-2">WG</text>
-            <circle cx="82" cy="60" r="7.5" fill="${accent}"/>
-          </svg>`;
-        } else {
-          return `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="32" fill="${accent}"/>
-            <path d="M10 24L90 24" stroke="${ink}" stroke-width="9" stroke-linecap="round"/>
-          </svg>`;
-        }
+      function svgEncuentro(ink) {
+        return `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 50H32M68 50H96" stroke="${ink}" stroke-width="8" stroke-linecap="round"/>
+          <rect x="18" y="26" width="20" height="38" rx="4" fill="${ink}"/>
+          <rect x="24" y="60" width="8" height="14" rx="2" fill="${ink}"/>
+          <rect x="62" y="26" width="20" height="38" rx="4" fill="${ink}"/>
+          <rect x="68" y="60" width="8" height="14" rx="2" fill="${ink}"/>
+          <circle cx="50" cy="50" r="10" fill="#D96B43"/>
+        </svg>`;
+      }
+
+      function svgWG(ink) {
+        return `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="88" height="88" rx="18" stroke="${ink}" stroke-width="7"/>
+          <text x="45" y="66" text-anchor="middle" fill="${ink}" font-family="'Manrope',Arial,sans-serif" font-size="43" font-weight="800" letter-spacing="-2">WG</text>
+          <circle cx="81" cy="60" r="7.5" fill="#D96B43"/>
+        </svg>`;
       }
 
       function getTargetUrl() {
@@ -742,114 +740,43 @@
           return 'https://wa.me/593980873462?text=Hola%20WoodGool';
         } else if (mode === '593989347024') {
           return 'https://wa.me/593989347024?text=Hola%20WoodGool';
-        } else if (mode === 'web') {
-          return 'https://ricciyazigi.github.io/woodgool/';
         } else {
-          return (qrInput.value || 'https://wa.me/c/593987861804').trim();
+          return 'https://ricciyazigi.github.io/woodgool/';
         }
       }
 
-      function renderAllStickers() {
-        const isStickerLight = qrStyle === 'light-all';
-        const isQrWhiteBg = qrStyle === 'dark-whiteqr' || qrStyle === 'light-all';
+      function renderAllQRs() {
+        const url = getTargetUrl();
+        const darkQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=420x420&ecc=H&margin=0&color=F5F2EB&bgcolor=080808&data=${encodeURIComponent(url)}`;
+        const lightQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=420x420&ecc=H&margin=0&color=111111&bgcolor=F5F2EB&data=${encodeURIComponent(url)}`;
 
-        // 1. Actualizar logos de los stickers
-        const suffix = isStickerLight ? '-light.svg' : '.svg';
-        stickerLogos.forEach(img => {
-          img.src = 'assets/logos/' + currentLogoBase + suffix;
-        });
-        rectSticker.classList.toggle('sticker-light', isStickerLight);
-        roundSticker.classList.toggle('sticker-light', isStickerLight);
-        squareQrSticker.classList.toggle('sticker-light', isStickerLight);
+        document.querySelectorAll('.qr-dark').forEach(img => { img.src = darkQrUrl; });
+        document.querySelectorAll('.qr-light').forEach(img => { img.src = lightQrUrl; });
 
-        // 2. Actualizar QR (Nivel H = 30% corrección de errores para soportar el logo central)
-        const targetUrl = getTargetUrl();
-        const fgColor = isQrWhiteBg ? '141413' : 'F5F2EB';
-        const bgColor = isQrWhiteBg ? 'FFFFFF' : '0E0E0E';
-        const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=420x420&ecc=H&margin=1&color=${fgColor}&bgcolor=${bgColor}&data=${encodeURIComponent(targetUrl)}`;
-
-        qrImage.src = qrApiUrl;
-        qrImageSecondary.src = qrApiUrl;
-
-        qrBoxMain.classList.toggle('qr-classic-white', isQrWhiteBg);
-        qrBoxSecondary.classList.toggle('qr-classic-white', isQrWhiteBg);
-
-        // 3. Inyectar logo central estilo Firefox dentro del QR
-        const badgeSvg = getCenterBadgeSVG(qrCenterLogo, isQrWhiteBg);
-        badgeMain.innerHTML = badgeSvg;
-        badgeSecondary.innerHTML = badgeSvg;
-
-        const who = waTargetSelect.value === '593987861804'
-          ? 'WhatsApp Business Oficial (+593 98 786 1804)'
-          : (waTargetSelect.value === 'catalog'
-            ? 'Catálogo Oficial WhatsApp (wa.me/c/593987861804)'
-            : (waTargetSelect.value === 'web'
-              ? 'Web Pública GitHub Pages'
-              : 'Enlace seleccionado'));
-
-        statusText.textContent = `✓ Sticker listo: Logo [${currentLogoBase}] · QR Estilo Firefox con emblema central → ${who}`;
+        document.querySelectorAll('.badge-bauhaus').forEach(el => { el.innerHTML = svgBauhaus('#F5F2EB'); });
+        document.querySelectorAll('.badge-bauhaus-light').forEach(el => { el.innerHTML = svgBauhaus('#141413'); });
+        document.querySelectorAll('.badge-encuentro').forEach(el => { el.innerHTML = svgEncuentro('#F5F2EB'); });
+        document.querySelectorAll('.badge-wg').forEach(el => { el.innerHTML = svgWG('#F5F2EB'); });
       }
 
-      waTargetSelect.addEventListener('change', () => {
-        customUrlWrap.style.display = waTargetSelect.value === 'custom' ? 'block' : 'none';
-        renderAllStickers();
-      });
-
-      qrLogoSelect.addEventListener('change', () => {
-        qrCenterLogo = qrLogoSelect.value;
-        renderAllStickers();
-      });
-
-      qrStyleSelect.addEventListener('change', () => {
-        qrStyle = qrStyleSelect.value;
-        renderAllStickers();
-      });
-
-      qrInput.addEventListener('input', renderAllStickers);
-
-      document.querySelectorAll('[data-select-logo]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          currentLogoBase = btn.dataset.selectLogo;
-          document.querySelectorAll('.option').forEach(card => {
-            card.classList.toggle('selected', card.dataset.card === currentLogoBase);
-          });
-          // Sincronizar automáticamente el icono central del QR si elige 03 o 06
-          if (currentLogoBase === '06-monograma-bauhaus') {
-            qrCenterLogo = 'bauhaus';
-            qrLogoSelect.value = 'bauhaus';
-          } else if (currentLogoBase === '03-taller' || currentLogoBase === '01-encuentro' || currentLogoBase === '09-fusion-favoritos') {
-            qrCenterLogo = 'encuentro';
-            qrLogoSelect.value = 'encuentro';
+      function applyPrintLayout() {
+        const mode = printFilterSelect.value;
+        container.innerHTML = originalCardsHTML;
+        if (mode !== 'all') {
+          const chosenCard = container.querySelector(`[data-vid="${mode}"]`);
+          if (chosenCard) {
+            const count = (mode === 'v5' || mode === 'v7' || mode === 'v8') ? 12 : 10;
+            const cloneHTML = chosenCard.outerHTML;
+            container.innerHTML = Array(count).fill(cloneHTML).join('');
           }
-          renderAllStickers();
-          document.querySelector('#stickers').scrollIntoView({ behavior: 'smooth' });
-        });
-      });
+        }
+        renderAllQRs();
+      }
 
-      // Alternar fondo de la galería de logos
-      const btnDark = document.querySelector('#btn-bg-dark');
-      const btnLight = document.querySelector('#btn-bg-light');
-      const gridLogoImgs = document.querySelectorAll('.logo-img');
+      waTargetSelect.addEventListener('change', renderAllQRs);
+      printFilterSelect.addEventListener('change', applyPrintLayout);
 
-      btnDark.addEventListener('click', () => {
-        document.body.classList.remove('light-preview');
-        btnDark.classList.add('active');
-        btnLight.classList.remove('active');
-        gridLogoImgs.forEach(img => {
-          img.src = 'assets/logos/' + img.dataset.base + '.svg';
-        });
-      });
-
-      btnLight.addEventListener('click', () => {
-        document.body.classList.add('light-preview');
-        btnLight.classList.add('active');
-        btnDark.classList.remove('active');
-        gridLogoImgs.forEach(img => {
-          img.src = 'assets/logos/' + img.dataset.base + '-light.svg';
-        });
-      });
-
-      renderAllStickers();
+      renderAllQRs();
     })();
   </script>
 </body>
