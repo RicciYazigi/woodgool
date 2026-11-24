@@ -3,10 +3,10 @@
   const PRICE_REGULAR = Number(config.priceRegular) || 89;
   const PRICE_LAUNCH = Number(config.priceLaunch) || 75;
 
-  // 1. GESTIÓN DE NÚMERO DE WHATSAPP
+  // 1. GESTIÓN DE NÚMERO DE WHATSAPP OFICIAL (593987861804)
+  const OFFICIAL_WA = '593987861804';
   function getWhatsappNumber() {
-    const saved = localStorage.getItem('woodgool_wa') || config.whatsapp || '';
-    return String(saved).replace(/\D/g, '');
+    return String(config.whatsapp || OFFICIAL_WA).replace(/\D/g, '');
   }
 
   let pendingMessage = '';
@@ -85,9 +85,9 @@
       cityInput.addEventListener('input', () => {
         const val = cityInput.value.toLowerCase();
         if (/(ibarra|imbabura|otavalo|atuntaqui|cotacachi|tulcan|carchi)/.test(val)) {
-          hubSelect.value = '593989347024';
+          hubSelect.value = 'Ibarra / Imbabura / Zona Norte';
         } else if (/(quito|tumbaco|cumbaya|chillos|sangolqui|pifo|puembo)/.test(val)) {
-          hubSelect.value = '593980873462';
+          hubSelect.value = 'Quito / Tumbaco / Valles';
         }
       });
     }
@@ -96,11 +96,9 @@
       e.preventDefault();
       const qty = Number(qtySelect.value) || 1;
       const total = qty * PRICE_LAUNCH;
-      const saved = qty * (PRICE_REGULAR - PRICE_LAUNCH);
       const name = document.querySelector('#order-name').value.trim();
       const city = document.querySelector('#order-city').value.trim();
-      const targetPhone = (hubSelect && hubSelect.value) ? hubSelect.value : '593980873462';
-      const hubName = targetPhone === '593989347024' ? 'Zona Norte / Ibarra' : 'Quito / Tumbaco';
+      const hubName = (hubSelect && hubSelect.value) ? hubSelect.value : 'Quito / Tumbaco / Valles';
       const payEl = document.querySelector('input[name="paymentMethod"]:checked');
       const payment = payEl ? payEl.value : 'Transferencia al momento de la entrega';
 
@@ -117,6 +115,7 @@
         '¿Me confirman disponibilidad para coordinar la entrega?'
       ].join('\n');
 
+      const targetPhone = getWhatsappNumber();
       const url = 'https://wa.me/' + targetPhone + '?text=' + encodeURIComponent(msg);
       window.open(url, '_blank', 'noopener,noreferrer');
     });

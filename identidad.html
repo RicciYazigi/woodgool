@@ -443,11 +443,13 @@
 
       <div class="qr-controls">
         <div>
-          <label for="wa-target-select">1. ¿A qué WhatsApp envía el QR?</label>
+          <label for="wa-target-select">1. ¿A dónde envía el QR del Sticker?</label>
           <select id="wa-target-select">
-            <option value="593980873462">WhatsApp Quito / Tumbaco (Tú: +593 98 087 3462)</option>
-            <option value="593989347024">WhatsApp Ibarra / Norte (Hermano: +593 98 934 7024)</option>
+            <option value="593987861804">Chat WhatsApp Business Oficial (+593 98 786 1804)</option>
+            <option value="catalog">Catálogo Directo WhatsApp (wa.me/c/593987861804)</option>
             <option value="web">Web Pública GitHub Pages (ricciyazigi.github.io/woodgool)</option>
+            <option value="593980873462">Respaldo Quito (+593 98 087 3462)</option>
+            <option value="593989347024">Respaldo Ibarra (+593 98 934 7024)</option>
             <option value="custom">Escribir otro enlace / URL personalizada</option>
           </select>
         </div>
@@ -732,14 +734,18 @@
 
       function getTargetUrl() {
         const mode = waTargetSelect.value;
-        if (mode === '593980873462') {
+        if (mode === '593987861804') {
+          return 'https://wa.me/593987861804?text=Hola%20WoodGool';
+        } else if (mode === 'catalog') {
+          return 'https://wa.me/c/593987861804';
+        } else if (mode === '593980873462') {
           return 'https://wa.me/593980873462?text=Hola%20WoodGool';
         } else if (mode === '593989347024') {
           return 'https://wa.me/593989347024?text=Hola%20WoodGool';
         } else if (mode === 'web') {
           return 'https://ricciyazigi.github.io/woodgool/';
         } else {
-          return (qrInput.value || 'https://wa.me/593980873462?text=Hola%20WoodGool').trim();
+          return (qrInput.value || 'https://wa.me/c/593987861804').trim();
         }
       }
 
@@ -773,9 +779,13 @@
         badgeMain.innerHTML = badgeSvg;
         badgeSecondary.innerHTML = badgeSvg;
 
-        const who = waTargetSelect.value === '593989347024'
-          ? 'WhatsApp Ibarra (+593 98 934 7024)'
-          : (waTargetSelect.value === '593980873462' ? 'WhatsApp Quito/Tumbaco (+593 98 087 3462)' : 'URL personalizada');
+        const who = waTargetSelect.value === '593987861804'
+          ? 'WhatsApp Business Oficial (+593 98 786 1804)'
+          : (waTargetSelect.value === 'catalog'
+            ? 'Catálogo Oficial WhatsApp (wa.me/c/593987861804)'
+            : (waTargetSelect.value === 'web'
+              ? 'Web Pública GitHub Pages'
+              : 'Enlace seleccionado'));
 
         statusText.textContent = `✓ Sticker listo: Logo [${currentLogoBase}] · QR Estilo Firefox con emblema central → ${who}`;
       }

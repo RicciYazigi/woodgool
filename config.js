@@ -1,13 +1,13 @@
-// Configuración oficial de WoodGool (Quito/Tumbaco + Ibarra/Norte)
+// Configuración oficial de WoodGool (Chip Único WhatsApp Business + Catálogo + Email)
 window.WOODGOOL = {
-  whatsapp: '593980873462', // Principal: Quito / Tumbaco / Envíos Nacionales
-  whatsappQuito: '593980873462', // Tú (Tumbaco - Quito)
-  whatsappIbarra: '593989347024', // Tu hermano (Ibarra - Zona Norte)
-  website: 'https://wa.me/593980873462',
+  whatsapp: '593987861804', // Chip Oficial WhatsApp Business WoodGool (+593 98 786 1804)
+  catalog: 'https://wa.me/c/593987861804', // Catálogo Oficial en WhatsApp Business
+  email: 'woodgool333@gmail.com',
+  whatsappQuito: '593980873462', // Respaldo Quito / Tumbaco
+  whatsappIbarra: '593989347024', // Respaldo Ibarra / Zona Norte
+  website: 'https://ricciyazigi.github.io/woodgool/',
   priceRegular: 89,
   priceLaunch: 75,
-  batchTotal: 100,
-  batchAvailable: 86,
-  defaultLogo: 'assets/logos/06-monograma-bauhaus.svg',
-  message: '¡Hola WoodGool! Quiero aprovechar el precio de lanzamiento de Navidad ($75 USD).'
+  defaultLogo: 'assets/logos/03-taller.svg',
+  message: 'Hola WoodGool, quiero pedir mi juego ($75 USD).'
 };
